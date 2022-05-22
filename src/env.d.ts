@@ -16,3 +16,5 @@ declare module '*.vue' {
 
 declare module '*.js'
 declare module '*.ts'
+declare module 'fabric'
+declare module '@multiavatar/multiavatar/esm'

@@ -16,8 +16,8 @@ export const routerMenu: RouteRecordRaw[] = [
   },
   {
     path: '/steganography',
-    meta: { title: '隐写术', type: 'multiple' },
     component: layout,
+    meta: { title: '隐写术', type: 'multiple' },
     children: [
       {
         path: '/steganography/text',
@@ -37,14 +37,38 @@ export const routerMenu: RouteRecordRaw[] = [
     ],
   },
   {
-    path: '/testing',
+    path: '/drawBoard',
     component: layout,
-    redirect: '/testing/index',
-    meta: { title: '测试', type: 'single' },
+    redirect: '/drawBoard/index',
+    meta: { title: '画板' },
     children: [
       {
-        path: '/testing/index',
-        component: () => import('@/page/testing/index.vue'),
+        path: '/drawBoard/index',
+        component: () => import('@/page/other/test.vue'),
+      },
+    ],
+  },
+  {
+    path: '/other',
+    component: layout,
+    meta: { title: '杂项', type: 'multiple' },
+    children: [
+      {
+        path: 'lat-long',
+        meta: { title: '经纬度' },
+        component: () => import('@/views/other/latitude-longitude.vue'),
+      },
+    ],
+  },
+  {
+    path: '/siteMap',
+    component: layout,
+    redirect: '/siteMap/index',
+    meta: { title: '超人导航' },
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/page/siteMap/index.vue'),
       },
     ],
   },

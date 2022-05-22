@@ -7,6 +7,13 @@
   // stylelint 需要检查的文件
   "stylelint.validate": ["css", "less", "postcss", "scss", "vue", "sass"],
   "editor.formatOnSave": false,
-  "cSpell.words": ["Commitlint", "steganography", "Stylelint", "Vite"]
+  "cSpell.words": [
+    "Commitlint",
+    "multiavatar",
+    "steganography",
+    "Stylelint",
+    "Vite",
+    "vitejs"
+  ]
   // "prettier.enable": false
 }
