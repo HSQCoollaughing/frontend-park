@@ -1,14 +1,16 @@
-import { defineConfig, loadEnv } from 'vite';
-import vue from '@vitejs/plugin-vue';
-import * as path from 'path';
-import AutoImport from 'unplugin-auto-import/vite';
-import Components from 'unplugin-vue-components/vite';
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
+import { defineConfig, loadEnv } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
+import * as path from 'path'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 // https://vitejs.dev/config/
 
 export default defineConfig((config) => ({
   plugins: [
     vue(),
+    vueJsx(),
     // Api自动导入
     AutoImport({
       // 目标文件
@@ -53,7 +55,7 @@ export default defineConfig((config) => ({
   resolve: {
     // 设置别名
     alias: [{ find: '@', replacement: path.resolve(__dirname, 'src') }],
-    extensions: ['.ts', '.js'],
+    extensions: ['.ts', '.js', 'tsx'],
   },
   css: {
     // css预处理器
@@ -64,4 +66,4 @@ export default defineConfig((config) => ({
       },
     },
   },
-}));
+}))
