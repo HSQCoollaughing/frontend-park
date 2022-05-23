@@ -22,18 +22,18 @@ export const routerMenu: RouteRecordRaw[] = [
       {
         path: '/steganography/text',
         meta: { title: '文字隐写' },
-        component: () => import('@/views/steganography/text-steganography.vue'),
+        component: () => import('@/page/steganography/text-steganography.vue'),
       },
-      {
-        path: '/steganography/enImg',
-        meta: { title: '图片隐写' },
-        component: () => import('@/views/steganography/img-steganography.vue'),
-      },
-      {
-        path: '/steganography/deImg',
-        meta: { title: '图片解密' },
-        component: () => import('@/views/steganography/img-decryption.vue'),
-      },
+      // {
+      //   path: '/steganography/enImg',
+      //   meta: { title: '图片隐写' },
+      //   component: () => import('@/page/steganography/img-steganography.vue'),
+      // },
+      // {
+      //   path: '/steganography/deImg',
+      //   meta: { title: '图片解密' },
+      //   component: () => import('@/page/steganography/img-decryption.vue'),
+      // },
     ],
   },
   {
@@ -56,7 +56,7 @@ export const routerMenu: RouteRecordRaw[] = [
       {
         path: 'lat-long',
         meta: { title: '经纬度' },
-        component: () => import('@/views/other/latitude-longitude.vue'),
+        component: () => import('@/page/other/test.vue'),
       },
     ],
   },
