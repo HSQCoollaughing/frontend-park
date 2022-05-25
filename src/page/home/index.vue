@@ -4,7 +4,7 @@ const state = reactive({
 })
 onMounted(() => {
   // state.height = document.body.clientHeight
-  state.height = document.querySelector('.fish-container').clientHeight
+  state.height = document.querySelector('.fish-container')!.clientHeight
 })
 </script>
 

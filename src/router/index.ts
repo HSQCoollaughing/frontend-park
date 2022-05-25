@@ -36,6 +36,7 @@ export const routerMenu: RouteRecordRaw[] = [
       // },
     ],
   },
+
   {
     path: '/drawBoard',
     component: layout,
@@ -54,7 +55,19 @@ export const routerMenu: RouteRecordRaw[] = [
     meta: { title: '杂项', type: 'multiple' },
     children: [
       {
-        path: 'lat-long',
+        path: '/other/webRTC',
+        component: () => import('@/page/webRTC/index.vue'),
+        meta: { title: 'webRTC', type: 'multiple' },
+        children: [
+          {
+            path: '/other/webRTC/index',
+            meta: { title: '选择设备' },
+            component: () => import('@/page/webRTC/selectDevices.vue'),
+          },
+        ],
+      },
+      {
+        path: '/other/lat-long',
         meta: { title: '经纬度' },
         component: () => import('@/page/other/test.vue'),
       },

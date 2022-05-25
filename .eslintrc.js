@@ -25,5 +25,7 @@ module.exports = {
     'no-unused-vars': 0, // 关闭未使用变量检查
     'no-param-reassign': 0, // 禁止对函数参数进行重新赋值
     'no-console': 2, //
+    // 'import/extensions': [2, 'always', { ignorePackages: true }],
+    'import/extensions': 0,
   },
-};
+}

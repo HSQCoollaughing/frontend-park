@@ -51,12 +51,13 @@ export default defineComponent({
           router={true}
         >
           {routerList.map((item: RouteRecordRaw) => createMenuItem(item))}
-          <el-menu-item index={route.matched[route.matched.length - 1].path}>
+          <el-menu-item>
             <a href='https://www.fedtop.com' target='_blank'>
               我的博客
             </a>
           </el-menu-item>
-          <el-menu-item index={route.matched[route.matched.length - 1].path}>
+          {/* index={route.matched[route.matched.length - 1].path} */}
+          <el-menu-item>
             <a href='https://github.com/wangrongding' target='_blank'>
               GitHub
             </a>
